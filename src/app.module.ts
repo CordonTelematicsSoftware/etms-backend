@@ -95,15 +95,15 @@ import { ScheduleReminderModule } from './schedule-reminder/schedule-reminder.mo
           idle: 10000,
           evict: 10000,
         },
-        dialectOptions: {
-          ssl: {
-            require: true,
-            rejectUnauthorized: true,
-            ca: readFileSync(
-              join(__dirname, '..', 'certs', 'global-bundle.pem'),
-            ),
-          },
-        },
+        // dialectOptions: {
+        //   ssl: {
+        //     require: true,
+        //     rejectUnauthorized: true,
+        //     ca: readFileSync(
+        //       join(__dirname, '..', 'certs', 'global-bundle.pem'),
+        //     ),
+        //   },
+        // },
       }),
     }),
 
@@ -122,9 +122,15 @@ import { ScheduleReminderModule } from './schedule-reminder/schedule-reminder.mo
             accessToken: await accessToken(),
           },
         },
-        defaults: {
-          from: '"no-reply" <mail@techtaliya.com>',
+        // defaults: {
+        //   from: '"no-reply" <mail@techtaliya.com>',
+        // },
+              defaults: {
+        from: {
+          name: 'no-reply',
+          address: 'mail@techtaliya.com',
         },
+      },
         template: {
           dir: process.cwd() + '/src/email/templates/',
           adapter: new EjsAdapter(), // or new PugAdapter()
