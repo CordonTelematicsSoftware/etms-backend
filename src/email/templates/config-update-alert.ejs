@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <h2>Configuration value update</h2>
+  <p>Configuration <strong><%= configName %></strong> was updated for <strong><%= orgName %></strong>.</p>
+
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Old Value</th>
+        <th>New Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= configName %></td>
+        <td><%= oldValue || 'N/A' %></td>
+        <td><%= newValue %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br/>
+  <p>Updated by: <%= changedByName %> (<%= changedByEmail %>) at <%= updatedAt %></p>
+</body>
+</html>

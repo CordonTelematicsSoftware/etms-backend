@@ -1,0 +1,26 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:latest", "tslint-config-prettier"],
+    "rules": {
+      "object-literal-sort-keys": false,
+      "member-access": false,
+      "no-console": true,
+      "class-name": true,
+      "ordered-imports": false,
+      "interface-name": [true, "never-prefix"],
+      "no-submodule-imports": false,
+      "curly": [true, "ignore-same-line"],
+      "no-implicit-dependencies": false,
+      "variable-name": {
+        "options": [
+          "check-format",
+          "allow-leading-underscore",
+          "allow-pascal-case"
+        ]
+      }
+    },
+    "linterOptions": {
+      "exclude": ["node_modules/**"]
+    }
+  }
+  

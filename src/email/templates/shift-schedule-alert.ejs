@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2>Shift Schedule <%= changeType === 'cancelled' ? 'Cancelled' : 'Updated' %></h2>
+    <p>
+        Dear Admin,
+    </p>
+    <p>
+        This is to inform you that the shift schedule for the below employee has been
+        <%= changeType === 'cancelled' ? 'cancelled' : 'updated' %> successfully.
+    </p>
+
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Employee Code</td>
+                <td><%= employee_code %></td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td><%= employee_name %></td>
+            </tr>
+            <tr>
+                <td>Shift Date</td>
+                <td><%= shift_date %></td>
+            </tr>
+            <tr>
+                <td><%= changeType === 'cancelled' ? 'Scheduled Shift Time' : 'Previous Shift Time' %></td>
+                <td><%= shift_time %></td>
+            </tr>
+            <% if (changeType !== 'cancelled') { %>
+                <tr>
+                    <td>New Shift Time</td>
+                    <td><%= new_shift_time %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <br />
+    <p>
+        Regards,<br />
+        Smart Router Team
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2 style="background-color:#4caf50;color:#fff;padding:16px;">Employee Reach Home Confirmation Successful</h2>
+
+    <p>Dear Reporting Manager,</p>
+
+    <div style="border:1px solid #ddd;border-radius:4px;padding:16px;background-color:#fafafa;">
+        <p style="margin:0 0 12px 0;">
+            <strong>
+                <%= employeeName %> (<%= employeeCode %>)
+            </strong> marked deboard
+            <% if (distanceMeters !==null) { %>
+                <strong>
+                    <%= distanceMeters %> meters
+                </strong>
+                <% } else { %>
+                    an unknown distance
+                    <% } %>
+                        from the home point (which is updated in your transport profile as home location).
+        </p>
+
+        <p style="margin:4px 0;">
+            <strong>Trip ID</strong> : <%= tripID %>
+        </p>
+        <p style="margin:4px 0;">
+            <strong>Deboarded Time</strong> : <%= deboardedTime %>
+        </p>
+
+        <% if (mapLink) { %>
+            <p style="margin:12px 0 0 0;">
+                <a href="<%= mapLink %>" target="_blank" rel="noopener noreferrer">view in map</a>
+            </p>
+            <% } %>
+    </div>
+
+</body>
+
+</html>

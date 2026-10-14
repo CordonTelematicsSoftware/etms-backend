@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+  <h2>Profile Update Request <%= status %></h2>
+  <p>Dear <strong><%= employeeName %></strong>,</p>
+  <p>Your profile update request has been <strong><%= status.toLowerCase() %></strong>.</p>
+
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; margin-top: 16px;">
+    <thead style="background-color: #f5f5f5;">
+      <tr>
+        <th>Field</th>
+        <th>Old Value</th>
+        <th>New Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% 
+        function formatKey(key) {
+          return key
+            .replace(/([A-Z])/g, ' $1')
+            .trim()
+            .replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+        }
+        Object.keys(newRecord).forEach(function(key) { 
+      %>
+      <tr>
+        <td><%= formatKey(key) %></td>
+        <td><%= oldRecord[key] || 'N/A' %></td>
+        <td><%= newRecord[key] %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

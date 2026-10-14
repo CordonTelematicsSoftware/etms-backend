@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2>Transport Team Profile <%= actionLabel %>
+    </h2>
+    <p>
+        <%= employeeName %> (<%= employeeCode %>) profile was <%= actionLabel.toLowerCase() %>.
+    </p>
+
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Old Value</th>
+                <th>New Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% function formatKey(key) { return key .replace(/([A-Z])/g, ' $1' ) .trim() .replace(/\b\w/g, function(c) {
+                return c.toUpperCase(); }); } Object.keys(newRecord).forEach(function(key) { %>
+                <tr>
+                    <td>
+                        <%= formatKey(key) %>
+                    </td>
+                    <td>
+                        <%= oldRecord[key] || 'N/A' %>
+                    </td>
+                    <td>
+                        <%= newRecord[key] %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+    <br />
+    <p>
+        Updated Time: <%= updatedAt %><br />
+            Updated By: <%= updatedByUsername %>
+    </p>
+</body>
+
+</html>

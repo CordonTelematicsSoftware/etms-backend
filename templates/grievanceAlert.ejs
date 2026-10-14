@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Grievance Alert</title>
+    <meta name="description" content="Grievance Alert Email Template." />
+    <style type="text/css">
+      a:hover {
+        text-decoration: underline !important;
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0; background-color: #f2f3f8">
+    <!--100% body table-->
+    <table
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      bgcolor="#f2f3f8"
+      style="
+        @import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Open+Sans:300,400,600,700);
+        font-family: 'Open Sans', sans-serif;
+      "
+    >
+      <tr>
+        <td>
+          <table
+            width="100%"
+            border="0"
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            style="max-width: 75%; margin: 0 auto"
+          >
+            <tr><td style="height: 80px">&nbsp;</td></tr>
+
+            <tr>
+              <td>
+                <table
+                  width="95%"
+                  border="0"
+                  align="center"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="
+                    max-width: 670px;
+                    background: #fff;
+                    border-radius: 3px;
+                    text-align: center;
+                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+                  "
+                >
+                  <tr><td style="height: 40px">&nbsp;</td></tr>
+
+                  <tr>
+                    <td style="padding: 0 35px">
+                      <h1
+                        style="
+                          color: #d9534f;
+                          font-weight: 600;
+                          margin: 0;
+                          font-size: 30px;
+                          font-family: 'Rubik', sans-serif;
+                        "
+                      >
+                        New Grievance Alert
+                      </h1>
+
+                      <span
+                        style="
+                          display: inline-block;
+                          margin: 25px 0;
+                          border-bottom: 1px solid #cecece;
+                          width: 100px;
+                        "
+                      ></span>
+
+                      <p
+                        style="
+                          color: #455056;
+                          font-size: 15px;
+                          line-height: 24px;
+                          margin: 0;
+                          text-align: left;
+                        "
+                      >
+                        A new grievance has been submitted and requires your
+                        attention.
+                      </p>
+
+                      <br />
+
+                      <!-- Grievance Details -->
+                      <h3
+                        style="
+                          color: #1e1e2d;
+                          font-size: 20px;
+                          margin-bottom: 10px;
+                          font-family: 'Rubik', sans-serif;
+                          text-align: left;
+                        "
+                      >
+                        Grievance Details
+                      </h3>
+
+                      <p
+                        style="
+                          color: #455056;
+                          font-size: 14px;
+                          line-height: 22px;
+                          text-align: left;
+                        "
+                      >
+                        
+                        <strong>Submitted By:</strong> <%= userName %><br />
+                        <strong>Category:</strong> <%= category %><br />
+                        <strong>Status:</strong> <span style="color:#d9534f; font-weight:600;"><%= status %></span><br />
+                        <strong>Submitted At:</strong> <%= createdAt %><br /><br />
+
+                       
+
+                        <strong>Description:</strong><br />
+                        <span style="white-space: pre-wrap;"><%= description %></span>
+                      </p>
+
+                      <br />
+
+                      <!-- Attachments -->
+                      <h3
+                        style="
+                          color: #1e1e2d;
+                          font-size: 20px;
+                          margin-bottom: 10px;
+                          font-family: 'Rubik', sans-serif;
+                          text-align: left;
+                        "
+                      >
+                        Attachments
+                      </h3>
+
+                      <p
+                        style="
+                          color: #455056;
+                          font-size: 14px;
+                          line-height: 22px;
+                          text-align: left;
+                        "
+                      >
+                        <% if (attachments && attachments.length > 0) { %>
+                          The grievance contains the following attachments:
+                          <br /><br />
+                          <% attachments.forEach(function(att){ %>
+                            • <%= att.fileName %><br />
+                          <% }) %>
+                          <br />
+                          
+                        <% }  %>
+                         
+                      </p>
+
+                      <br />
+
+                      <!-- Action Button -->
+                     
+                    </td>
+                  </tr>
+
+                  <tr><td style="height: 40px">&nbsp;</td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td style="height: 80px">&nbsp;</td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!--/100% body table-->
+  </body>
+</html>

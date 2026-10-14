@@ -1,0 +1,14 @@
+{
+    "apps": [
+        {
+            "name": "etms-core",
+            "script": "dist/main.js",
+            "instances": 1,
+            "exec_mode": "cluster",
+            "env": {
+                "NODE_ENV": "uat",
+                "PORT": 7000
+            }
+        }
+    ]
+}

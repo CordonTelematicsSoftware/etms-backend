@@ -1,0 +1,16 @@
+export enum NotificationEvents {
+  ACCOUNT_CREATION = 'account.creation',
+  DRIVER_OTP_LOGIN = 'driver.otp.login',
+  EMP_MARK_ATTENDANCE = 'emp.mark.attendance',
+  OTP_LOGIN = 'otp.login',
+  PASSWORD_RESET = 'password.reset',
+  TRIP_STARTED_PICK = 'trip.started.pick',
+  TRIP_STARTED_DROP = 'trip.started.drop',
+  VENDOR_OTP_LOGIN = 'vendor.otp.login',
+  SUPER_ADMIN_OTP_LOGIN = 'superAdmin.otp.login',
+  CAB_REACHED = 'cab-reached',
+  SOS = 'sos',
+  SECURITY_PIN_RESET_OTP = 'security-pin.reset.otp',
+  SCHEDULE_BOOKING_REMINDER = 'schedule.booking.reminder',
+  DRIVER_ASSIGNMENT_ALERT = 'driver.assignment.alert',
+}

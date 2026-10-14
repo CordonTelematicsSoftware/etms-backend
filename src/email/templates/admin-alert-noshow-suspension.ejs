@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <h2 style="background-color:#e53935;color:#fff;padding:16px;">
+    [ALERT] Smart Router Access Suspended
+  </h2>
+
+  <p>An employee's Smart Router app access has been automatically disabled.</p>
+
+  <table border="0" cellpadding="6" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td><strong>Employee Name</strong></td>
+      <td>
+        <%= employeeName %> (<%= employeeCode %>)
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Team</strong></td>
+      <td>
+        <%= teamName %>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Process</strong></td>
+      <td>
+        <%= processName %>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Date &amp; Time</strong></td>
+      <td>
+        <%= dateTime %>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Monthly No-Show Count</strong></td>
+      <td>
+        <%= noShowCount %> %>
+      </td>
+    </tr>
+  </table>
+
+  <p style="margin-top:16px;">
+    Please review the logs in the Smart Router Admin Portal if further action is required.
+  </p>
+  <p>Best regards,<br />Smart Router Team</p>
+</body>
+
+</html>

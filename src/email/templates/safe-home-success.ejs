@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <h2 style="color:#2e7d32;">✅ Safe Home Confirmed</h2>
+  <p>Dear Reporting Manager,</p>
+  <p>The safe home check for the employee below has been completed successfully.</p>
+
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Employee Name</td>
+        <td><%= employeeName %></td>
+      </tr>
+      <tr>
+        <td>Employee Code</td>
+        <td><%= employeeCode %></td>
+      </tr>
+      <tr>
+        <td>Reason</td>
+        <td><%= reason %></td>
+      </tr>
+      <tr>
+        <td>Trip ID</td>
+        <td><%= tripID %></td>
+      </tr>
+      <tr>
+        <td><strong>Trip Request ID</strong></td>
+        <td><%= tripRequestID %></td>
+      </tr>
+      <tr>
+        <td>Deboarded Time</td>
+        <td><%= deboardTime %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <% if (mapLink) { %>
+  <br/>
+  <a href="<%= mapLink %>"
+     style="background-color:#2e7d32;color:#fff;padding:10px 20px;text-decoration:none;border-radius:4px;">
+    View in Map
+  </a>
+  <% } %>
+</body>
+</html>
