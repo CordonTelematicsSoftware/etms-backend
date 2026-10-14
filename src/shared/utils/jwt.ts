@@ -8,7 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 import { JwtPayloadInterface } from '../../auth/interfaces/jwt-payload';
 import { ConfigService } from '@nestjs/config';
 
-const DEFAULT_SESSION_EXPIRY_IN_SECONDS = 21600; // 6h
+const DEFAULT_SESSION_EXPIRY_IN_SECONDS = 2592000; // 30 days (1 month)
 
 @Injectable()
 export class JsonWebTokenService {
