@@ -2,12 +2,11 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://techtaliya.com/img/techtaliya-logo.5fd90b44.png" width="200" alt="TechTaliya Logo" /></a>
 </p> -->
 
-  <p align="center">Connect 1103: ETMS Backendnd Management</p>
+  <p align="center">ETMS Backend Management</p>
 
 ## Description
 
-Web Application to manage Members of SNDP Union 1103.
-Mobile Application to manage Members of SNDP Union 1103.
+ A NestJS-based backend application for the Employee Transportation Management System, providing APIs for managing employees, vendors, vehicles, trips, routes, and transportation operations.
 
 ## Git
 
