@@ -104,7 +104,8 @@ async function bootstrap() {
     });
   }
   const host = '0.0.0.0';
-  const port = process.env.PORT || 7000;
+  // const port = process.env.PORT || 7000;
+   const port = process.env.PORT;
   await app.listen(port, host, (err?: any) => {
     if (err) {
       // eslint-disable-next-line no-console
