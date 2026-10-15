@@ -1,14 +1,17 @@
+
 {
-    "apps": [
-        {
-            "name": "etms-core",
-            "script": "dist/main.js",
-            "instances": 1,
-            "exec_mode": "cluster",
-            "env": {
-                "NODE_ENV": "uat",
-                "PORT": 7000
-            }
-        }
-    ]
+  "apps": [
+    {
+      "name": "etms-backend",
+      "cwd": "/home/ubuntu/etms-backend",
+      "script": "npm",
+      "args": "run start",
+      "instances": 2,
+      "exec_mode": "cluster",
+      "env": {
+        "NODE_ENV": "uat",
+        "PORT": 7000
+      }
+    }
+  ]
 }
