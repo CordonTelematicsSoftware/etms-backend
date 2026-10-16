@@ -261,8 +261,7 @@ export class EmployeeController {
       entityPermissions: user?.permissions?.filter(
         (permission) => permission?.split('-')?.[0] === 'Employee',
       ),
-    };
-  }
+    };  }
 
   @Put(':id')
   @UseGuards(PermissionGuard('Employee-Update'))
