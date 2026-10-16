@@ -8,8 +8,8 @@ import { JwtService } from '@nestjs/jwt';
 import { JwtPayloadInterface } from '../../auth/interfaces/jwt-payload';
 import { ConfigService } from '@nestjs/config';
 
-// const DEFAULT_SESSION_EXPIRY_IN_SECONDS = 2592000; // 30 days (1 month)
-const DEFAULT_SESSION_EXPIRY_IN_SECONDS =2100; 
+const DEFAULT_SESSION_EXPIRY_IN_SECONDS = 2592000; // 30 days (1 month)
+// const DEFAULT_SESSION_EXPIRY_IN_SECONDS =1000; 
 
 @Injectable()
 export class JsonWebTokenService {
@@ -37,10 +37,10 @@ export class JsonWebTokenService {
    */
   getSessionExpiryInSeconds(): number {
     const configured = Number(this.configService.get('JWT_EXPIRY_IN_SECONDS'));
-    this.logger.log('JWT_EXPIRY_IN_SECONDS configured to: ' + configured);  
+    // this.logger.log('JWT_EXPIRY_IN_SECONDS configured to: ' + configured);  
     if (!Number.isFinite(configured) || configured <= 0) {
       this.logger.warn(
-       'JWT_EXPIRY_IN_SECONDS absent or non-numeric; using default 500s (8 minutes and 20 seconds)', 
+       'JWT_EXPIRY_IN_SECONDS absent or non-numeric; using default 30days (30days)', 
       );
       return DEFAULT_SESSION_EXPIRY_IN_SECONDS;
     }
